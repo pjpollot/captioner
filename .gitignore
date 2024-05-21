@@ -1,5 +1,6 @@
-# Mac OS
+# Project related
 *.DS_Store
+cache
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

@@ -40,6 +40,9 @@ class ContentBlock:
         for name, caption in caption_list:
             caption_dict[name] = caption
         return caption_dict
+    
+    def get_child_blocks(self) -> list:
+        return self._child_blocks.copy()
 
     @property
     def name(self) -> str:
