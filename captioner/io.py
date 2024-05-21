@@ -48,7 +48,7 @@ def block_to_folder(block: ContentBlock, target_folder_path: str) -> None:
     captions = block.to_captions()
     for i, (file_path, caption) in enumerate(captions.items()):
         filename, file_extension = os.path.basename(file_path).split(".")
-        new_filename = f"{project_name}_{i}"
+        new_filename = f"{project_name}_{i}_{filename}"
         copyfile(file_path, os.path.join(root_path, f"{new_filename}.{file_extension}"))
         with open(os.path.join(root_path, f"{new_filename}.txt"), "w") as f:
             f.write(caption)
